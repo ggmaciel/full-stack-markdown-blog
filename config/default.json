@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://gustavo:EbLQDJdxKmscVC8u@markdownblog.mq9zf.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret": "markdown_myJwtSecret"
+}
