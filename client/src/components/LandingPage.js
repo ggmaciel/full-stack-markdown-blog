@@ -34,14 +34,21 @@ export default function LandingPage() {
                 </div>
                 <div className="landing-page-info">
                     <div className="blog-text">Blogging made easy</div>
-                    <div className="landing-page-buttons">
-                        <button className="login-btn" onClick={onLogin}>
-                            Login
-                        </button>
-                        <button className="register-btn" onClick={onRegister}>
-                            Register
-                        </button>
-                    </div>
+                    {auth ? (
+                        ""
+                    ) : (
+                        <div className="landing-page-buttons">
+                            <button className="login-btn" onClick={onLogin}>
+                                Login
+                            </button>
+                            <button
+                                className="register-btn"
+                                onClick={onRegister}
+                            >
+                                Register
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
             <div className="landing-col-right"></div>

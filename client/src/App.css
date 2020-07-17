@@ -35,6 +35,7 @@ body {
     font-weight: 900;
     margin: 30px;
     margin-left: 50px;
+    margin-bottom: 80px;
     color: white;
     background: url(logo-circles.svg);
     background-position: 15vh;
@@ -53,12 +54,12 @@ body {
 .landing-page-info {
     flex-direction: column;
     margin-left: 100px;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 .blog-text {
     color: white;
-    font-size: 55pt;
+    font-size: 50pt;
 }
 
 .landing-page-buttons {
@@ -127,48 +128,79 @@ body {
     margin-top: 5px;
 }
 
-@media only screen and (max-width: 1350px) {
-    .user-icon {
-        position: absolute;
-        float: right;
-        margin: 10px;
-        background: url(user-icon.svg);
-        background-repeat: no-repeat;
-        padding: 30px;
-        top: 7%;
-        left: 35%;
-    }
-}
-
-@media only screen and (max-width: 1250px) {
+@media only screen and (min-width: 320px) and (max-width: 479px) {
     .landing-col-right {
+        display: none;
+    }
+
+    .blog-text {
+        color: white;
+        font-size: 35pt;
+    }
+
+    .landing-page-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 70px;
+        margin-top: 80px;
+    }
+
+    .login-btn {
+        font-size: 22pt;
+        padding: 7px;
+        font-family: "Montserrat", sans-serif;
+        color: #1e1e1e;
+        background-color: #a7ff83;
+        outline: none;
+        border: none;
         display: block;
-        float: right;
-        width: 0%;
-        background: url(home-shape.svg);
-        background-position: right;
-        background-repeat: no-repeat;
+        width: 200px;
+        border-radius: 0.8rem;
+    }
+    .register-btn {
+        font-size: 22pt;
+        margin-top: 10px;
+        padding: 7px;
+        font-family: "Montserrat", sans-serif;
+        color: #1e1e1e;
+        background-color: #a7ff83;
+        outline: none;
+        border: none;
+        display: block;
+        width: 200px;
+        border-radius: 0.8rem;
     }
 
     .landing-col-left {
         float: left;
-        width: 100%;
+        width: 80%;
         font-family: "Montserrat", sans-serif;
     }
 
-    .landing-page-info {
-        flex-direction: column;
-        margin-left: 100px;
-        margin-top: 60px;
+    .logo {
+        display: flex;
+        font-size: 55pt;
+        font-weight: 900;
+        margin: 30px;
+        margin-left: 20px;
+        color: white;
+        background: url(logo-circles.svg);
+        background-position: 15vh;
+        background-repeat: no-repeat;
     }
 
     .posts-link {
         display: flex;
         align-items: center;
         margin-left: 140px;
-        margin-top: 32px;
+        margin-top: 28px;
         color: white;
-        font-size: 25pt;
+        font-size: 20pt;
+    }
+
+    .landing-page-buttons {
+        margin-top: 80px;
     }
 
     .user-icon {
@@ -178,12 +210,43 @@ body {
         background: url(user-icon.svg);
         background-repeat: no-repeat;
         padding: 30px;
-        top: 7%;
-        left: 35%;
+        top: 18%;
+        left: 5%;
     }
-}
+} /* SMARTPHONES PORTRAIT */
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (min-width: 480px) and (max-width: 624px) {
+    .landing-col-right {
+        display: none;
+    }
+
+    .landing-col-left {
+        float: left;
+        width: 80%;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .blog-text {
+        color: white;
+        font-size: 45pt;
+    }
+
+    .posts-link {
+        margin-left: 260px;
+    }
+
+    .logo {
+        display: flex;
+        font-size: 65pt;
+        font-weight: 900;
+        margin: 30px;
+        margin-left: 20px;
+        color: white;
+        background: url(logo-circles.svg);
+        background-position: 15vh;
+        background-repeat: no-repeat;
+    }
+
     .user-icon {
         position: absolute;
         float: right;
@@ -191,12 +254,32 @@ body {
         background: url(user-icon.svg);
         background-repeat: no-repeat;
         padding: 30px;
-        top: 7%;
+        top: 8%;
         left: 45%;
     }
-}
+} /* SMARTPHONES LANDSCAPE */
 
-@media only screen and (max-width: 850px) {
+@media only screen and (min-width: 625px) and (max-width: 809px) {
+    .logo {
+        margin-left: 40px;
+    }
+    .landing-col-right {
+        display: none;
+    }
+
+    .posts-link {
+        margin-left: 390px;
+    }
+
+    .landing-page-info {
+        margin-top: 50px;
+    }
+
+    .blog-text {
+        color: white;
+        font-size: 50pt;
+    }
+
     .user-icon {
         position: absolute;
         float: right;
@@ -204,8 +287,50 @@ body {
         background: url(user-icon.svg);
         background-repeat: no-repeat;
         padding: 30px;
-        top: 7%;
-        left: 80%;
+        top: 8%;
+        left: 48%;
+    }
+} /* TABLETS PORTRAIT */
+
+@media only screen and (min-width: 810px) and (max-width: 1200px) {
+    .landing-col-right {
+        display: none;
+    }
+
+    .posts-link {
+        margin-left: 490px;
+    }
+
+    .landing-page-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 370px;
+        margin-top: -20px;
+    }
+
+    .user-icon {
+        position: absolute;
+        float: right;
+        margin: 10px;
+        background: url(user-icon.svg);
+        background-repeat: no-repeat;
+        padding: 30px;
+        top: 8%;
+        left: 40%;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .user-icon {
+        position: absolute;
+        float: right;
+        margin: 10px;
+        background: url(user-icon.svg);
+        background-repeat: no-repeat;
+        padding: 30px;
+        top: 8%;
+        left: 35%;
     }
 }
 
@@ -367,6 +492,7 @@ input:-webkit-autofill:active {
         width: 50%;
         height: 100vh;
         background-color: #1e1e1e;
+        padding-bottom: 90px;
         font-family: "Montserrat", sans-serif;
     }
 
@@ -398,6 +524,7 @@ input:-webkit-autofill:active {
     height: 100vh;
     background-color: #1e1e1e;
     font-family: "Montserrat", sans-serif;
+    padding-bottom: 30px;
 }
 
 .register-left-col {
@@ -427,6 +554,7 @@ input:-webkit-autofill:active {
     background: url(logo-circles.svg);
     background-position: 15vh;
     background-repeat: no-repeat;
+    width: 30%;
 }
 
 .register-container {
@@ -452,6 +580,7 @@ input:-webkit-autofill:active {
     border: 3px solid #a7ff83;
     border-radius: 0.5rem;
     margin-bottom: 10px;
+    margin-left: 10px;
     color: rgb(255, 255, 255);
     font-size: 13pt;
     margin-bottom: -0px;
@@ -496,6 +625,7 @@ input:-webkit-autofill:active {
         height: 100vh;
         background-color: #1e1e1e;
         font-family: "Montserrat", sans-serif;
+        padding-bottom: 125px;
     }
 
     .register-left-col {
@@ -509,11 +639,30 @@ input:-webkit-autofill:active {
         display: flex;
         align-items: center;
         flex-direction: column;
-        background-color: #1a1a1a;
+        background-color: #1e1e1e;
         border-radius: 1.5rem;
-        padding: 20px;
-        padding-left: 60px;
-        padding-right: 60px;
+        padding: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .register-form-container > input {
+        outline: none;
+        padding: 18px;
+        width: 250px;
+        border: 3px solid #a7ff83;
+        border-radius: 0.5rem;
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+        font-size: 13pt;
+        margin-bottom: -0px;
+    }
+
+    .register-form-container > label {
+        color: white;
+        margin: 10px;
+        width: 75%;
+        font-size: 15pt;
     }
 
     .register-vector {
@@ -627,7 +776,6 @@ input:-webkit-autofill:active {
 
 .user-articles-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
@@ -705,12 +853,8 @@ input:-webkit-autofill:active {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 6vh;
-
     width: 10%;
     float: right;
-}
-
-.user-comments > h2 {
     color: #1e1e1e;
 }
 
@@ -722,32 +866,101 @@ input:-webkit-autofill:active {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 6vh;
+    color: #1e1e1e;
 
     width: 10%;
     float: right;
 }
 
-.user-likes > h2 {
-    color: #1e1e1e;
-}
-
-@media only screen and (max-width: 1050px) {
-    .user-page-header-detail {
-        background: #1e1e1e;
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .user-page-icon {
+        display: flex;
+        font-size: 45pt;
+        font-weight: 900;
+        margin-left: 28px;
+        color: white;
+        background: url(logo-circles.svg);
+        background-position: 12vh;
+        background-repeat: no-repeat;
+        width: 180px;
     }
 
+    .user-page-header-detail {
+        display: none;
+    }
     .user-info {
         display: flex;
         flex-direction: column;
         padding: 50px;
-        margin-left: -140px;
-        margin-top: 25px;
+        margin-left: -220px;
+        margin-top: 50px;
         height: 50%;
         color: white;
     }
 
+    .user-info > h1 {
+        font-size: 25pt;
+    }
+
+    .logout {
+        display: flex;
+        background-color: #1e1e1e;
+        font-size: 11pt;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        padding: 12px;
+        cursor: pointer;
+        height: 15%;
+        margin-left: -70px;
+    }
+
+    .user-btn {
+        outline: none;
+        padding: 10px;
+        width: 180px;
+        border: none;
+        border-radius: 0.5rem;
+        color: #1e1e1e;
+        font-size: 15pt;
+        background-color: #a7ff83;
+        font-family: "Montserrat", sans-serif;
+    }
+
     .user-articles-container {
-        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #ffffff;
+        box-shadow: 0.5px 2px 2px 3px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        margin: 20px;
+        border-radius: 2rem;
+        margin-right: 30px;
+    }
+
+    .user-article-container {
+        background-color: #1e1e1e;
+        width: 85%;
+        margin-bottom: 20px;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        border-radius: 1rem;
+        padding: 10px;
+    }
+
+    .user-article-title {
+        margin-left: 10px;
+        font-size: 18pt;
+    }
+
+    .user-article-body {
+        margin-left: 10px;
+        color: rgb(172, 172, 172);
+    }
+
+    .user-footer {
+        margin-left: 10px;
     }
 
     .user-comments {
@@ -757,12 +970,10 @@ input:-webkit-autofill:active {
         background: url(comment.svg);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 6vh;
-
-        width: 20%;
+        background-size: 5vh;
+        width: 15%;
         float: right;
     }
-
     .user-likes {
         display: flex;
         align-items: center;
@@ -770,19 +981,142 @@ input:-webkit-autofill:active {
         background: url(like.svg);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 6vh;
-
-        width: 16%;
+        background-size: 5vh;
+        width: 20%;
         float: right;
+    }
+} /* SMARTPHONES PORTRAIT */
+
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+    .user-page-icon {
+        display: flex;
+        font-size: 45pt;
+        font-weight: 900;
+        margin-left: 28px;
+        color: white;
+        background: url(logo-circles.svg);
+        background-position: 12vh;
+        background-repeat: no-repeat;
+        width: 180px;
+    }
+
+    .user-page-header-detail {
+        display: none;
+    }
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        margin-left: -120px;
+        margin-top: 50px;
+        height: 50%;
+        color: white;
+    }
+
+    .user-info > h1 {
+        font-size: 25pt;
     }
 
     .logout {
-        font-size: 13pt;
+        display: flex;
+        background-color: #1e1e1e;
+        font-size: 15pt;
         color: white;
         font-family: "Montserrat", sans-serif;
-        padding: 5px;
-        margin-top: 10px;
-        margin-right: 12px;
+        padding: 0px;
+        cursor: pointer;
+        height: 15%;
+        margin-left: -50px;
+    }
+
+    .user-btn {
+        outline: none;
+        padding: 10px;
+        width: 180px;
+        border: none;
+        border-radius: 0.5rem;
+        color: #1e1e1e;
+        font-size: 15pt;
+        background-color: #a7ff83;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .user-articles-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #ffffff;
+        box-shadow: 0.5px 2px 2px 3px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        margin: 20px;
+        border-radius: 2rem;
+        margin-right: 30px;
+    }
+
+    .user-article-container {
+        background-color: #1e1e1e;
+        width: 85%;
+        margin-bottom: 20px;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        border-radius: 1rem;
+        padding: 10px;
+    }
+
+    .user-article-title {
+        margin-left: 10px;
+        font-size: 18pt;
+    }
+
+    .user-article-body {
+        margin-left: 10px;
+        color: rgb(172, 172, 172);
+    }
+
+    .user-footer {
+        margin-left: 10px;
+    }
+
+    .user-comments {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(comment.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 5vh;
+        width: 15%;
+        float: right;
+    }
+    .user-likes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(like.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 5vh;
+        width: 20%;
+        float: right;
+    }
+} /* SMARTPHONES LANDSCAPE */
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    .logout {
+        display: flex;
+        background-color: #1e1e1e;
+        font-size: 15pt;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        padding: 0px;
+        cursor: pointer;
+        height: 15%;
+        margin-left: 110px;
+    }
+
+    .user-page-header-detail {
+        display: none;
     }
 }
 
@@ -825,10 +1159,6 @@ input:-webkit-autofill:active {
 .modal-btn:hover {
     background-color: rgb(141, 255, 96);
     cursor: pointer;
-}
-
-.modal-btn-resize {
-    display: none;
 }
 
 .modal-form {
@@ -894,22 +1224,30 @@ input:-webkit-autofill:active {
     margin-top: 10px;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (min-width: 320px) and (max-width: 479px) {
     .title-modal {
         outline: none;
-        padding: 18px;
-        width: 250px;
+        padding: 15px;
+        width: 150px;
         border: 3px solid #1e1e1e;
         border-radius: 0.5rem;
         margin-bottom: 20px;
-        font-size: 22pt;
+        font-size: 15pt;
         font-family: "Montserrat", sans-serif;
+    }
+
+    .new-article-form {
+        color: black;
+        font-family: arial;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
     }
 
     .preview-modal {
         outline: none;
-        padding: 15px;
-        width: 250px;
+        padding: 10px;
+        width: 180px;
         border: 3px solid #1e1e1e;
         border-radius: 0.5rem;
         margin-bottom: 20px;
@@ -917,38 +1255,92 @@ input:-webkit-autofill:active {
         font-family: "Montserrat", sans-serif;
     }
 
-    .modal-btn {
-        display: none;
-    }
-
-    .modal-form {
-        background-color: white;
-        padding: 8px;
-        width: 400px;
-        border-radius: 1rem;
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
-    }
-
-    .modal-btn-resize {
-        display: block;
+    .modal-post-btn {
         outline: none;
-        padding: 12px;
-        width: 50px;
+        padding: 5px;
+        width: 130px;
         border: none;
         border-radius: 0.5rem;
         color: #1e1e1e;
         font-size: 18pt;
         background-color: #a7ff83;
         font-family: "Montserrat", sans-serif;
-        float: right;
         margin-top: 10px;
     }
 
-    .modal-btn-resize:hover {
-        background-color: rgb(141, 255, 96);
-        cursor: pointer;
+    .modal-btn {
+        outline: none;
+        padding: 6px;
+        width: 50px;
+        border: none;
+        border-radius: 0.5rem;
+        color: #1e1e1e;
+        font-size: 14pt;
+        background-color: #a7ff83;
+        font-family: "Montserrat", sans-serif;
+        float: right;
+        margin-bottom: 0px;
     }
-}
+} /* SMARTPHONES PORTRAIT */
+
+@media only screen and (min-width: 480px) and (max-width: 700px) {
+    .title-modal {
+        outline: none;
+        padding: 15px;
+        width: 280px;
+        border: 3px solid #1e1e1e;
+        border-radius: 0.5rem;
+        margin-bottom: 20px;
+        font-size: 15pt;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .new-article-form {
+        color: black;
+        font-family: arial;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .preview-modal {
+        outline: none;
+        padding: 10px;
+        width: 320px;
+        border: 3px solid #1e1e1e;
+        border-radius: 0.5rem;
+        margin-bottom: 20px;
+        font-size: 12pt;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .modal-post-btn {
+        outline: none;
+        padding: 5px;
+        width: 130px;
+        border: none;
+        border-radius: 0.5rem;
+        color: #1e1e1e;
+        font-size: 18pt;
+        background-color: #a7ff83;
+        font-family: "Montserrat", sans-serif;
+        margin-top: 10px;
+    }
+
+    .modal-btn {
+        outline: none;
+        padding: 6px;
+        width: 50px;
+        border: none;
+        border-radius: 0.5rem;
+        color: #1e1e1e;
+        font-size: 14pt;
+        background-color: #a7ff83;
+        font-family: "Montserrat", sans-serif;
+        float: right;
+        margin-bottom: 0px;
+    }
+} /* SMARTPHONES LANDSCAPE */
 
 /* One Article page
 ================================================================================================================
@@ -1095,7 +1487,7 @@ input:-webkit-autofill:active {
 .article-page-link {
     position: absolute;
     top: 0;
-    left: 20%;
+    left: 30%;
     display: flex;
     align-items: center;
     margin-left: 50px;
@@ -1105,7 +1497,7 @@ input:-webkit-autofill:active {
     font-family: "Montserrat", sans-serif;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (min-width: 320px) and (max-width: 579px) {
     .article-container {
         background-color: rgb(255, 255, 255);
         margin: 20px;
@@ -1114,34 +1506,124 @@ input:-webkit-autofill:active {
         font-family: "Montserrat", sans-serif;
     }
 
+    .article-page-icon {
+        display: flex;
+        font-size: 45pt;
+        font-weight: 900;
+        margin-left: 30px;
+        margin-top: 30px;
+        color: #1e1e1e;
+        background: url(logo-circles.svg);
+        background-position: 10vh;
+        background-repeat: no-repeat;
+        width: 200px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .article-page-link {
+        position: absolute;
+        top: 2%;
+        left: 45%;
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+        margin-top: 35px;
+        color: #1e1e1e;
+        font-size: 20pt;
+        font-family: "Montserrat", sans-serif;
+    }
+
     .article-like {
         position: absolute;
-        padding: 20px;
-        top: 15%;
-        left: 10%;
+        padding: 5px;
+        top: 20%;
+        left: 4%;
+        font-family: "Montserrat", sans-serif;
+        color: #1e1e1e;
+        font-size: 15pt;
+    }
+
+    .article-page-title {
+        font-size: 20pt;
+        margin-bottom: 30px;
+        margin-top: 70px;
     }
 
     .comment-input {
         outline: none;
         padding: 18px;
-        width: 400px;
+        width: 250px;
         border: 3px solid #a7ff83;
         border-radius: 0.5rem;
         margin-top: 20px;
         color: #1e1e1e;
         font-size: 13pt;
     }
+} /* SMARTPHONES PORTRAIT */
+
+@media only screen and (min-width: 580px) and (max-width: 879px) {
+    .article-container {
+        background-color: rgb(255, 255, 255);
+        margin: 20px;
+        width: 75%;
+        padding: 30px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .article-page-icon {
+        display: flex;
+        font-size: 45pt;
+        font-weight: 900;
+        margin-left: 30px;
+        margin-top: 30px;
+        color: #1e1e1e;
+        background: url(logo-circles.svg);
+        background-position: 10vh;
+        background-repeat: no-repeat;
+        width: 200px;
+        font-family: "Montserrat", sans-serif;
+    }
 
     .article-page-link {
         position: absolute;
-        margin-left: 250px;
+        top: 2%;
+        left: 45%;
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+        margin-top: 35px;
         color: #1e1e1e;
-        font-size: 25pt;
-        top: 0%;
-        left: 10%;
+        font-size: 20pt;
         font-family: "Montserrat", sans-serif;
     }
-}
+
+    .article-like {
+        position: absolute;
+        padding: 5px;
+        top: 20%;
+        left: 4%;
+        font-family: "Montserrat", sans-serif;
+        color: #1e1e1e;
+        font-size: 15pt;
+    }
+
+    .article-page-title {
+        font-size: 20pt;
+        margin-bottom: 30px;
+        margin-top: 70px;
+    }
+
+    .comment-input {
+        outline: none;
+        padding: 18px;
+        width: 500px;
+        border: 3px solid #a7ff83;
+        border-radius: 0.5rem;
+        margin-top: 20px;
+        color: #1e1e1e;
+        font-size: 13pt;
+    }
+} /* SMARTPHONES LANDSCAPE / TABLET */
 
 /* Error 
 ================================================================================================================
@@ -1156,7 +1638,7 @@ input:-webkit-autofill:active {
 
 .error-404 {
     font-family: "Montserrat", sans-serif;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .error-404-number {
@@ -1237,21 +1719,24 @@ input:-webkit-autofill:active {
     color: #858585;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+    .posts-icon {
+        margin-left: 30px;
+    }
     .posts-banner {
-        font-size: 50pt;
+        font-size: 38pt;
         color: #1e1e1e;
         font-family: "Montserrat", sans-serif;
-        margin-left: 50px;
+        margin-left: 20px;
         border-bottom: 3px solid rgba(0, 0, 0, 0.096);
     }
 
     .posts-gustavo {
         margin: 5px;
-        margin-left: 50px;
+        margin-left: 20px;
         color: #1e1e1e;
         font-family: "Montserrat", sans-serif;
-        font-size: 10pt;
+        font-size: 8pt;
     }
 
     .posts-container {
@@ -1260,4 +1745,29 @@ input:-webkit-autofill:active {
         width: 75%;
         font-family: "Montserrat", sans-serif;
     }
-}
+} /* SMARTPHONES PORTRAIT */
+
+@media only screen and (min-width: 501px) and (max-width: 810px) {
+    .posts-banner {
+        font-size: 38pt;
+        color: #1e1e1e;
+        font-family: "Montserrat", sans-serif;
+        margin-left: 80px;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.096);
+    }
+
+    .posts-gustavo {
+        margin: 5px;
+        margin-left: 80px;
+        color: #1e1e1e;
+        font-family: "Montserrat", sans-serif;
+        font-size: 8pt;
+    }
+
+    .posts-container {
+        margin-top: 60px;
+        margin-left: 50px;
+        width: 75%;
+        font-family: "Montserrat", sans-serif;
+    }
+} /* SMARTPHONES LANDSCAPE */

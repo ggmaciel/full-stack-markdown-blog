@@ -71,10 +71,10 @@ export default function UserPage() {
                                 Author: {article.author}
                             </h3>
                             <div className="user-comments">
-                                <h2>{article.comments.length}</h2>
+                                <h3>{article.comments.length}</h3>
                             </div>
                             <div className="user-likes">
-                                <h2>{article.likes.length}</h2>
+                                <h3>{article.likes.length}</h3>
                             </div>
                         </div>
                     </div>
@@ -126,32 +126,28 @@ export default function UserPage() {
                                     type="title"
                                     name="title"
                                     id="title"
-                                    placeholder="Some Preview of your story"
+                                    placeholder="Preview your story"
                                     className="preview-modal"
                                     onChange={onPreviewChange}
                                 />
-                                <CKEditor
-                                    editor={ClassicEditor}
-                                    data="Write your story"
-                                    onInit={(editor) => {
-                                        // You can store the "editor" and use when it is needed.
-                                    }}
-                                    onChange={(event, editor) => {
-                                        const data = editor.getData();
-                                        setBody(data);
-                                    }}
-                                    onBlur={(event, editor) => {}}
-                                    onFocus={(event, editor) => {}}
-                                    className="editor"
-                                />
+                                <div className="editor-container">
+                                    <CKEditor
+                                        editor={ClassicEditor}
+                                        data="Write your story"
+                                        onInit={(editor) => {
+                                            // You can store the "editor" and use when it is needed.
+                                        }}
+                                        onChange={(event, editor) => {
+                                            const data = editor.getData();
+                                            setBody(data);
+                                        }}
+                                        onBlur={(event, editor) => {}}
+                                        onFocus={(event, editor) => {}}
+                                        className="editor"
+                                    />
+                                </div>
                                 <strong className="error-modal">{error}</strong>
                                 <button className="modal-post-btn">Post</button>
-                                <button
-                                    className="modal-btn-resize"
-                                    onClick={() => setModal(!modal)}
-                                >
-                                    X
-                                </button>
                             </form>
                         </div>
                     </div>
@@ -161,7 +157,7 @@ export default function UserPage() {
                     className="logout"
                     onClick={() => (dispatch(logout()), history.push("/"))}
                 >
-                    Logout
+                    <h5>Logout</h5>
                 </div>
             </div>
             <div className="user-bottom-row">
